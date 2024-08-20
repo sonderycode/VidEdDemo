@@ -3,59 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Pages Site</title>
+    <title>Animated GIF Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
             margin: 0;
-            padding: 0;
-            text-align: center;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .gallery-item {
+            border: 2px solid #ddd;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.2s;
+            text-align: center;
+            
+        }
+        .caption {
+            font-size: 14px; 
+            color: #0fa0e9; 
+            margin-top: 5px;
+        }
+        .gallery-item img {
+            max-width: 200px;
+            max-height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
         }
         h1 {
-            margin: 0;
-        }
-        main {
-            padding: 20px;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #45a049;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to My First GitHub Pages Site!</h1>
-    </header>
+    <h3>Original prompt: <br>
+        Editing prompt: a Porsche car driving down a curvy road in the countryside
+    </h3>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Video_edit/RAVE/FateZero_teaser_car-turn_8_512*512a Porsche car driving down a curvy road in the countryside.gif" alt="Sample GIF">
+            <p class="caption">RAVE</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Video_edit/Tune-A-Video_loop/FateZero_teaser_car-turn_8_512*512_a Porsche car driving down a curvy road in the countryside.gif" alt="Sample GIF">
+            <p class="caption">Tune-A-Video</p>
+        </div>
+    </div>
 
-    <main>
-        <p>This is a simple HTML file deployed on GitHub Pages.</p>
-        <p>Click the button below to display an alert.</p>
-        <button class="button" onclick="showAlert()">Click Me!</button>
-    </main>
-
-    <script>
-        function showAlert() {
-            alert("Hello, GitHub Pages!");
-        }
-    </script>
+    <h3>Original prompt: <br>
+        Editing prompt:An African American boxer wearing black boxing gloves punches towards the camera, cartoon style
+    </h3>
+    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Video_edit/RAVE/FRESCO_boxer-punching-towards-camera_32_480*480An African American boxer wearing black boxing gloves punches towards the camera, cartoon style.gif" alt="Sample GIF">
+            <p class="caption">RAVE</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Video_edit/Tune-A-Video_loop/FRESCO_boxer-punching-towards-camera_32_480*480_An African American boxer wearing black boxing gloves punches towards the camera, cartoon style.gif" alt="Sample GIF">
+            <p class="caption">Tune-A-Video</p>
+        </div>
+    </div>
 
 </body>
 </html>
